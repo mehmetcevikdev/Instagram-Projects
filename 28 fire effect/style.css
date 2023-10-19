@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.red {
+    width: 200px;
+    height: 200px;
+    background: orangered;
+    box-shadow: 0px 0px 10px 5px orangered;
+}
+.orange {
+    width: 160px;
+    height: 160px;
+    background: orange;
+    left: 20px;
+    box-shadow: 0px 0px 10px 5px orange;
+}
+.gold {
+    width: 140px;
+    height: 140px;
+    background: gold;
+    left: 30px;
+    box-shadow: 0px 0px 10px 5px gold;
+}
+.white {
+    width: 120px;
+    height: 120px;
+    background: lightyellow;
+    left: 40px;
+    box-shadow: 0px 0px 10px 5px lightyellow;
+}
+.flame-wrapper {
+    position: relative;
+    animation: flicker 3ms ease infinite;
+    margin-top: 6rem;
+}
+.flame {
+      bottom: 0;
+      position: absolute;
+      border-radius: 50% 0% 50% 50%;
+      transform: rotate(-45deg);
+}
+@keyframes flicker {
+    0% {
+        transform: rotate(-1deg);
+    }
+    20% {
+        transform: rotate(2deg) scaleY(1.05);
+    }
+    40% {
+        transform: rotate(-1deg);
+    }
+    60% {
+        transform: rotate(1deg);
+    }
+    80% {
+        transform: rotate(-1deg) scaleY(0.9);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}

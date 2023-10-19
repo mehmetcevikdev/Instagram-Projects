@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=w-logo-holder>
+        <div class=w-logo>
+            <div class=first-left></div>
+            <div class=first-right></div>
+            <div class=second-left></div>
+            <div class=second-right></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+body {
+    background-color: black;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+.w-logo-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+.w-logo {
+    position: relative;
+    width: 200px;
+    margin: auto;
+    transform: rotateY(60deg);
+    transform-style: preserve-3d;
+}
+.w-logo > div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+}
+.w-logo > .first-left {
+      transform: rotate3d(1, 0, 0, -15deg) translate3d(50px, -28px, 102px);
+      background-color: #373737;
+}
+.w-logo > .first-right {
+    transform: rotate3d(1, 0, 0, 15deg) translate3d(50px, 13px, 51px);
+    background-color: #ffffff;
+}
+.w-logo > .second-left {
+    transform: rotate3d(1, 0, 0, -15deg) translate3d(50px, 0, 0);
+    background-color: #373737;
+}
+.w-logo > .second-right {
+    transform: rotate3d(1, 0, 0, 15deg) translate3d(50px, -13px, -51px);
+    background-color: #ffffff;
+}
+.w-logo {
+    animation: w-rotate 10s linear infinite;
+}
+@keyframes w-rotate {
+    0% {
+        transform: rotateY(60deg);
+    }
+    100% {
+        transform: rotateY(420deg);
+    }
+}
